@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="keywords" content="Ubermelon, job, application, Software Engineer, QA Engineer, Product Manager">
+    <meta name="description" content="Apply for a job at Ubermelon">
+    <meta name="author" content="Charley McLean">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" 
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/styles.css">
+    
+    <title>{% block title %}TITLE GOES HERE{% endblock %}</title>
+</head>
+
+<ul>
+    {% for message in get_flashed_messages() %}
+        <li>{{ message }}</li>
+    {% endfor %}
+</ul>
+
+<body>
+    {% block content %}BODY CONTENT GOES HERE{% endblock %}
+    <footer>Copyright 2016 Ubermelon</footer>
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</body>
+</html>

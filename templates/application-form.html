@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block title %}Ubermelon Hiring Page{% endblock %}
+
+{% block content %}
+<div class="container">
+            <div class="row">
+                <section class="col-xs-12 col-md-8 col-md-offset-2" id="splash">
+                    <img src="http://blog.fairwaymarket.com/wp-content/uploads/2013/06/melons.jpg" 
+                    class="img-responsive center-block" alt="Image of melons" 
+                    id="hero">
+                    <h1 align="center">Join our team!</h1>
+                    <p class="panel panel-default">
+                    Ubermelon is a dynamic, exciting place to work.  We hire 
+                    great people, and every one of them is empowered to think 
+                    for themselves, be a self starter, and to be original.  We 
+                    invite you to fill out the application below, and look 
+                    forward to meeting you. Please provide your first name, last 
+                    name, and salary requirement, then choose which position you 
+                    are interested in.
+                    </p>
+                </section>
+            </div>
+
+            <div class="row">
+                <section class="col-xs-12">
+                    <form action="/application" method="POST">
+                        <div class="input-group">
+                            <label for="firstname"></label>
+                            <input type="text" class="form-control" 
+                            placeholder="Applicant's first name" 
+                            id="firstname" name="firstname" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="lastname"></label>
+                            <input type="text" class="form-control" 
+                            placeholder="Applicant's last name" id="lastname" 
+                            name="lastname" required>
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                Salary requirement:  $</span>
+                            <label for="salary"></label>
+                            <input id="salary" type="text" name="salary" 
+                            class="form-control" aria-label="Amount (to the nearest 
+                            dollar)" required>
+                            <span class="input-group-addon" style="width: 55px">.00</span>
+                        </div>
+                        <div class="btn-group" data-toggle="buttons">
+                                    <label class="btn btn-primary" for="softwareengineer">
+                                        <input type="radio" name="position" 
+                                        id="softwareengineer" autocomplete="off" 
+                                        value="Software Engineer">Software Engineer
+                                    </label>
+                                    <label class="btn btn-primary" for="qaengineer">
+                                        <input type="radio" name="position" 
+                                        id="qaengineer" autocomplete="off" 
+                                        value="QA Engineer">QA Engineer
+                                    </label>
+                                    <label class="btn btn-primary" for="productmanager">
+                                        <input type="radio" name="position" 
+                                        id="productmanager" autocomplete="off" 
+                                        value="Product Manager">Product Manager
+                                    </label>
+                        </div>
+                        <br>
+                        <input type="submit" name="submit" value="Submit Application">
+                    </form>
+                </section>
+            </div>
+        </div>
+{% endblock %}

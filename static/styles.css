@@ -1,0 +1,17 @@
+.form-control {
+    background-color: yellow;
+}
+
+input {
+    background-color: yellow;
+}
+
+div .input-group #lastname {
+    font-weight: bold;
+}
+
+p {
+    /*outline: 2px solid green;*/
+    font-size: 20px;
+
+}
